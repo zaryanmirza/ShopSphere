@@ -1,0 +1,183 @@
+@import "tailwindcss";
+
+/* ========================================
+   ShopSphere — Global Styles
+======================================== */
+
+:root {
+  font-family:
+    Inter,
+    ui-sans-serif,
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+
+  color: #0f172a;
+  background: #ffffff;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  --shop-primary: #4f46e5;
+  --shop-primary-hover: #4338ca;
+  --shop-text: #0f172a;
+  --shop-muted: #64748b;
+  --shop-border: #e2e8f0;
+  --shop-surface: #f8fafc;
+}
+
+/* Predictable sizing for all elements */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Page defaults */
+html {
+  min-width: 320px;
+  scroll-behavior: smooth;
+  scroll-padding-top: 6rem;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  margin: 0;
+  color: var(--shop-text);
+  background: #ffffff;
+}
+
+/* Form controls inherit the app's typography */
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+button:disabled {
+  cursor: not-allowed;
+}
+
+input,
+textarea,
+select {
+  color: inherit;
+}
+
+textarea {
+  resize: vertical;
+}
+
+/* Images should never overflow their containers */
+img,
+svg {
+  max-width: 100%;
+}
+
+img {
+  display: block;
+}
+
+/* Links */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Consistent keyboard accessibility */
+:focus-visible {
+  outline: 2px solid var(--shop-primary);
+  outline-offset: 3px;
+}
+
+/* The search wrapper supplies a rounded focus ring; prevent a second,
+   square outline from appearing on the input itself. */
+#product-search:focus-visible {
+  outline: none;
+  outline-offset: 0;
+}
+
+/* Text selection */
+::selection {
+  color: #ffffff;
+  background: var(--shop-primary);
+}
+
+/* Smoother image loading and layout */
+img {
+  height: auto;
+}
+
+/* Consistent horizontal page boundaries */
+#root {
+  min-height: 100vh;
+  isolation: isolate;
+}
+
+/* Keep long product titles from breaking layouts */
+h1,
+h2,
+h3,
+h4,
+p {
+  overflow-wrap: anywhere;
+}
+
+/* Custom scrollbar for a cleaner interface */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #cbd5e1 transparent;
+}
+
+*::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 999px;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Avoid unwanted animations for users who disable motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Small-screen improvements */
+@media (max-width: 640px) {
+  html {
+    scroll-padding-top: 5rem;
+  }
+
+  body {
+    overflow-wrap: break-word;
+  }
+}
