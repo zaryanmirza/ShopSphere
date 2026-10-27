@@ -66,9 +66,9 @@ When I encountered a bug or unexpected behavior, I usually described the problem
 
 I did not write a separate long prompt for every component. The main prompt below established the requirements and the one-component-at-a-time workflow; short follow-up messages such as **“Give me the next component”** continued that process. Additional prompts were mainly used when a bug, layout issue, or behavior needed to be corrected.
 
-## Main development prompt (translated from Urdu)
+## Main development prompt
 
-The following is an English translation of the main prompt I provided at the start of development:
+The following is the main prompt I provided at the start of development:
 
 > I want to build a fully functional e-commerce web application using React (Vite) and Tailwind CSS. Use the Fake Store API (https://fakestoreapi.com) for the data.
 >
@@ -117,7 +117,6 @@ Examples of refinements and project checks during completion included:
 
 - Addressed product-card button alignment so cards look more consistent when product titles have different lengths; I used AI assistance to help troubleshoot UI issues and reviewed the result.
 - Improved the search field's focus appearance to avoid an unwanted square outline.
-- Changed the footer's social icon/link from GitHub to LinkedIn. The link currently points to LinkedIn's homepage; replace it with a personal profile URL if that is the intended destination.
 - Checked the `.gitignore` so generated files and local configuration—such as `node_modules/`, `dist/`, and `.env` files—are excluded from Git.
 - Ran `npm run lint` and `npm run build`; both completed successfully during the final checks.
 - Deployed the app to Vercel and opened the live site to check that it was running.
@@ -130,7 +129,6 @@ These are examples of the review-and-fix workflow, not a claim that every change
 - Checkout displays a local confirmation screen. It does not send an order to a backend or charge a payment method.
 - Cart and wishlist data are stored only in the current browser and do not sync across devices or user accounts.
 - Product images are hosted remotely and require an internet connection; the UI has fallback states for unavailable images.
-- Social links are placeholders and should be replaced with the intended profile URLs before using the site publicly as a personal brand.
 
 ## Main source structure
 
